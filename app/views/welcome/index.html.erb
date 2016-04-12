@@ -1,0 +1,22 @@
+<h1>Welcome#index</h1>
+<p>This is my very awesome travel site. </p>
+<p> <%= @homestate %> </p>
+
+
+<ol>
+<% @countries.each do |country| %>
+	<li><%= country%></li>
+<% end %>	
+</ol>
+
+<%#= image_tag "peru_cnt_9nov09_istock_b.jpg", width: 200, alt: "Welcome to Peru", id: "Peru", class: "travel-pics" %>
+<%#=image_tag "children-lambs.jpg", width:200, alt: "Kids of Peru", id: "kids", class: "kids" %>
+
+<%#knows to look back at the welcome_controller to call on images and the inforation%>
+<% @images.each do |image| %>
+		<p> <%= image_tag image, alt: "Happy llama" %></p>
+<% end %>		
+
+<% @image_hash.each do |key, value| %>
+	<p><%= image_tag key, alt: value %></p>
+<% end %>	
